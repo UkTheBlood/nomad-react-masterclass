@@ -26,8 +26,17 @@ import styled, { keyframes } from "styled-components";
 //   background-color: tomato;
 // `
 
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor}
+`
+
 const Wrapper = styled.div`
   display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `
 const rotationAnmation = keyframes`
   0% {
@@ -46,8 +55,8 @@ const Emoji = styled.p`
   font-size: 36px;
 `
 const Box = styled.div`
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,12 +85,9 @@ function App() {
     //   <Input />
     // </Father> 
 
-    <Wrapper>
-      <Box>
-        <Emoji>🙂</Emoji>
-      </Box>
-      <Emoji>🤩</Emoji>
-    </Wrapper>
+     <Wrapper>
+      <Title>Hello</Title>
+     </Wrapper>
 
   )
 }
